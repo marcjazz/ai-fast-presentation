@@ -1,249 +1,156 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/ai-fast-presentation/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Parent presentation</title>
-  <script type="module" crossorigin src="/ai-fast-presentation/assets/js/main-BX-bHdlb.js"></script>
-  <link rel="stylesheet" crossorigin href="/ai-fast-presentation/assets/css/main-tyPzPigZ.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Compatibility & LiteLLM</title>
+  <script type="module" crossorigin src="/ai-fast-presentation/assets/index-DfI7Vb-H.js"></script>
+  <link rel="stylesheet" crossorigin href="/ai-fast-presentation/assets/index-WVW6-kl1.css">
 </head>
+
 <body>
-<div class="reveal">
-    <img src="data:image/svg+xml,%3csvg%20width='270'%20height='270'%20viewBox='0%200%20270%20270'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%200H270V270H8C3.58173%20270%200%20266.418%200%20262V0Z'%20fill='%232F2CF9'/%3e%3cg%20clip-path='url(%23clip0_3199_5734)'%3e%3cpath%20d='M173.564%2089.3809C171.966%2089.3809%20170.165%2089.4138%20168.156%2089.451C163.385%2089.5397%20157.45%2089.6499%20150.249%2089.3809H124.137C124.026%2089.3809%20123.925%2089.3895%20123.789%2089.4038C117.229%2089.5784%20115.853%2093.5267%20115.853%2096.8097V101.066C115.853%20104.512%20117.327%20108.619%20124.349%20108.619H150.608C169.132%20108.619%20174.135%20108.595%20174.135%20124.422H105.81C93.3812%20124.422%2085.278%20126.784%2080.3897%20131.467C80.351%20131.504%2080.3086%20131.539%2080.2704%20131.576C75.9693%20135.773%2074.2058%20141.806%2074.2046%20149.652L74.1765%20153.339C74.1765%20153.339%2074.1765%20153.339%2074.1765%20153.34L74.1745%20153.608C74.1745%20165.762%2080.7509%20180.238%20112.084%20180.238H155.996C181.966%20180.238%20195.135%20170.858%20195.135%20152.36V107.154C195.135%2098.0175%20184.651%2089.3809%20173.564%2089.3809ZM171.405%20158.026C169.82%20159.424%20165.885%20161.091%20156.142%20161.091H111.997C108.533%20161.091%20105.751%20161.062%20103.542%20160.854C103.153%20160.818%20102.782%20160.775%20102.428%20160.726C101.546%20160.605%20100.772%20160.443%20100.096%20160.229C99.7534%20160.12%2099.4362%20159.998%2099.1428%20159.861C99.0168%20159.802%2098.8951%20159.74%2098.7778%20159.675C98.3557%20159.442%2097.9865%20159.173%2097.6732%20158.858C96.8618%20158.041%2096.4008%20156.927%2096.2156%20155.408C96.1503%20154.874%2096.1181%20154.291%2096.1181%20153.651V150.334C96.1181%20149.221%2096.1215%20148.129%2096.6378%20147.165C97.6767%20145.226%20100.808%20143.807%20110.23%20143.785H110.232C110.304%20143.785%20110.371%20143.784%20110.444%20143.784H174.203L174.216%20147.753C174.216%20152.974%20173.276%20156.424%20171.405%20158.026Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_3199_5734'%3e%3crect%20width='120.96'%20height='90.8567'%20fill='white'%20transform='translate(74.1745%2089.3809)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="@-logo" class="logo">
-
-    <div class="slides">
-        <section>
-            <img src="/ai-fast-presentation/assets/img/adorsys-DOSCBOU9.png" alt="adorsys-logo">
-            <h4>AI-Powered Productivity:</h4>
-            <h1>Building Smarter Software, Faster</h1>
-            <h6>Kuidja / Segning - 26/04/2025</h6>
-
-            <p class="fragment">
-                <em class="greyish" style="">V042... It evolves so fast</em>😅
-            </p>
-        </section>
-
-        <section>
-            <h2>The Pressure Cooker</h2>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Opening -->
             <section>
-                <h3>Complexity ⬆️</h3>
-                <p>Larger projects, more dependencies.</p>
-            </section>
-            <section>
-                <h3>Deadlines ⬇️</h3>
-                <p>Faster release cycles, tighter schedules.</p>
+                <h4>AI-Powered Productivity</h4>
+                <h1>OpenAI Compatibility & LiteLLM Proxy</h1>
+                <h6>Workshop for Developers & PMs - 2025</h6>
+                <p class="fragment"><em class="greyish">Standardized APIs for flexible AI integrations</em></p>
             </section>
 
+            <!-- What is OpenAI Compatibility -->
             <section>
-                <h3>Tech 🤯</h3>
-                <p>Constant learning, new frameworks every month!</p>
-                <img class="floating-image fragment" src="/ai-fast-presentation/assets/img/stress-BVwYaWwJ.png" alt="stress">
-            </section>
-        </section>
-
-        <section>
-            <h2>AI: Your New Toolkit</h2>
-            <section>
-                <h3>Supercharge Your Workflow!</h3>
-                <img class="floating-image fragment" src="/ai-fast-presentation/assets/img/voila-CodwM339.png" alt="voila">
-            </section>
-            <section>
-                <h3>Code ⚡️</h3>
-                <p>Generate boilerplate, auto-complete code snippets.</p>
-            </section>
-            <section>
-                <h3>Refactor 🔨</h3>
-                <p>Improve code quality, identify potential bugs.</p>
-            </section>
-            <section>
-                <h3>Docs 📚</h3>
-                <p>Automatically generate documentation from code.</p>
-            </section>
-            <section>
-                <h3>Debug 🐛➡️✅</h3>
-                <p>Smart suggestions, faster bug fixes.</p>
-            </section>
-        </section>
-
-        <section>
-            <h2>Better again?</h2>
-            <img class="floating-image fragment" src="/ai-fast-presentation/assets/img/agents-D_RGF_Ak.png" alt="agents">
-        </section>
-
-        <section>
-            <h2>MCP: AI's Context Key</h2>
-            <section>
-                <p>The Missing Link for Intelligent AI</p>
-                <p>Data ➡️ Secure Link (MCP) ➡️ AI</p>
-                <div class="mermaid">
-                    graph LR
-                    A[AI Model] --> B{MCP Server}
-                    B --> C[Database]
-                    B --> D[APIs]
-                    B --> E[Files]
-                    C --> B
-                    D --> B
-                    E --> B
-                    B --> A
-                </div>
+                <aside class="notes">
+                    <h2>What Does It Mean to be OpenAI-Compatible?</h2>
+                    <ul>
+                        <li>An API mimics OpenAI's endpoints, request, and response formats.</li>
+                        <li>Developers can use the same SDKs, CLI tools, and integrations without rewriting code.</li>
+                        <li>Supports multi-provider usage and smooth switching.</li>
+                    </ul>
+                </aside>
             </section>
 
+            <!-- Why Compatibility Matters -->
             <section>
-                <p>MCP is a glue to (<em>almost</em>) everything</p>
-                <div class="mermaid">
-                    graph LR
-                    A[AI Model] --> B{MCP Server 1}
-                    A --> C{MCP Server 2}
-                    B --> D[Database]
-                    C --> E[API Endpoints]
-                    D --> B
-                    E --> C
-                </div>
-            </section>
-
-            <section>
-                <p>Combining Multiple Data Sources for Richer Insights</p>
-                <div class="mermaid">
-                    graph LR
-                    A[AI Model] --> B{MCP Server 1}
-                    B --> C[Database A]
-                    B --> D{MCP Server 2}
-                    D --> E[API B]
-                    F{MCP Server 3} --> G[File System]
-                    D --> F
-                    B & F --> H[Data Graph]
-                    H --> A
-                </div>
-            </section>
-        </section>
-
-        <section>
-            <h2>MCP in a nutshell</h2>
-
-            <section>
+                <h2>Why Compatibility Matters</h2>
                 <ul>
-                    <li><b>Data Source Abstraction</b>: MCP servers abstract the underlying data source, exposing a
-                        standardized
-                        API to AI models.
-                    </li>
-                    <li><b>Query Transformation</b>: They translate high-level AI queries into data
-                        source-specific queries.
-                    </li>
+                    <li><b>Portability:</b> Easily switch AI providers.</li>
+                    <li><b>Integration:</b> VS Code, LangChain, CLI scripts rely on OpenAI-compatible APIs.</li>
+                    <li><b>Standardization:</b> Shared response formats prevent bugs.</li>
+                    <li><b>Future-proofing:</b> Avoid vendor lock-in.</li>
+                </ul>
+            </section>
+
+            <!-- Common Endpoints -->
+            <section>
+                <section>
+                    <h2>Common OpenAI Endpoints & Examples</h2>
+                    <div class="mermaid">
+                        mindmap
+                        root((OpenAI Endpoints))
+                          a1[Chat Completions]
+                          a2[Embeddings]
+                          a3[Fine-tuning]
+                          a4[Models]
+                          a5[Files]
+                          a6[Moderations]
+                    </div>
+                    <p>Let's look at some examples:</p>
+                </section>
+                <section>
+                    <h3>1. Chat Completions (/v1/chat/completions)</h3>
+                    <p>Used for chat-based AI interactions.</p>
+                    <pre><code>{
+  "model": "gpt-4",
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Write a haiku about coding."}
+  ]
+}</code></pre>
+                    <pre><code>{
+  "id": "chatcmpl-123",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "message": {"role": "assistant", "content": "Code flows like a stream,\nLogic dancing in silence,\nDreams in every loop."},
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 15, "completion_tokens": 20, "total_tokens": 35}
+}</code></pre>
+                </section>
+
+                <section>
+                    <h3>2. Embeddings (/v1/embeddings)</h3>
+                    <p>Used for vector representations of text.</p>
+                    <pre><code>{
+  "model": "text-embedding-ada-002",
+  "input": "AI compatibility is powerful."
+}</code></pre>
+                    <pre><code>{
+  "object": "embedding",
+  "data": [
+    {"index": 0, "embedding": [0.0123, -0.0045, 0.9987, ...]}
+  ],
+  "model": "text-embedding-ada-002",
+  "usage": {"prompt_tokens": 6, "total_tokens": 6}
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- LiteLLM Proxy -->
+            <section>
+                <h2>LiteLLM Proxy: Mapping OpenAI-Compatible APIs</h2>
+                <aside class="notes">
+                    <div class="mermaid">
+                        graph LR
+                        A[Acts as a proxy translating requests to multiple AI providers] --> B(Preserves OpenAI-style requests and responses)
+                        B --> C{Supports both OpenAI and non-OpenAI providers (Anthropic, Azure OpenAI, Hugging Face, etc.)}
+                    </div>
+                </aside>
+                <div class="mermaid">
+                    graph LR
+                    A[Developer] --> B(LiteLLM Proxy)
+                    B --> C{OpenAI}
+                    B --> D[Anthropic]
+                    B --> E((Azure))
+                    B --> F>Hugging Face]
+                </div>
+            </section>
+
+            <!-- Response Message Format -->
+            <section>
+                <h2>Response Message Format</h2>
+                <p>Consistency is key: all providers through LiteLLM return OpenAI-compatible JSON.</p>
+                <pre><code>{
+  "id": "chatcmpl-abc",
+  "object": "chat.completion",
+  "choices": [
+    {"message": {"role": "assistant", "content": "Hello world!"}}
+  ]
+}</code></pre>
+                <p>Prevents downstream errors in clients expecting OpenAI schema.</p>
+            </section>
+
+            <!-- Takeaway -->
+            <section>
+                <h2>Takeaway</h2>
+                <ul>
+                    <li>OpenAI compatibility ensures interoperability.</li>
+                    <li>LiteLLM standardizes responses across providers.</li>
+                    <li>Developers gain freedom, flexibility, and reliability.</li>
                 </ul>
             </section>
 
             <section>
-                <ul>
-                    <li><b>Security and Access Control</b>: They enforce granular access control policies to protect
-                        sensitive
-                        data.
-                    </li>
-                    <li><b>Data Transformation and Enrichment</b>: Optionally, they transform and
-                        enrich data
-                        before it's delivered to the AI model.
-                    </li>
-                </ul>
-
-                <img class="fragment floating-image" src="/ai-fast-presentation/assets/img/lost-ObJy2FfG.png" alt="lost">
+                <h2>Questions? 🎤</h2>
+                <h3>Let's Discuss!</h3>
             </section>
-        </section>
-
-        <section>
-            <h2>Integration</h2>
-            <p>Almost everywhere</p>
-
-            <div class="custom-icons">
-                <img class="zed" src="/ai-fast-presentation/assets/img/zed-CJG-qNK_.png" alt="lost">
-                <img src="/ai-fast-presentation/assets/img/vscode-CeH2gS79.png" alt="lost">
-                <img src="/ai-fast-presentation/assets/img/continue-dev-DEUMsa6g.png" alt="lost">
-                <img src="/ai-fast-presentation/assets/img/intellij-BEsqJIiL.png" alt="lost">
-            </div>
-        </section>
-
-        <section>
-            <h2>MCP Server: Data Security</h2>
-            <p>Ensuring Secure Access to Your Data:</p>
-            <section>
-                <h3>Access Control</h3>
-                <p>Limit access based on roles and permissions.</p>
-            </section>
-            <section>
-                <h3>Authentication</h3>
-                <p>Verify the identity of the AI model.</p>
-            </section>
-            <section>
-                <h3>Privacy First</h3>
-                <p>Protect sensitive data and comply with regulations.</p>
-            </section>
-        </section>
-
-        <section>
-            <h2>AI Code Generation ✨</h2>
-            <h3>Database ➡️ React Component</h3>
-            <p>AI generates UI from database schema, automatically!</p>
-        </section>
-
-        <section>
-            <h2>AI Refactoring 🧹</h2>
-            <h3>Clean, Readable Code</h3>
-            <p>Improve code quality with AI-powered refactoring.</p>
-        </section>
-
-        <section>
-            <h2>Don't fall into the trap</h2>
-            <h3>🤷🏿‍♂️</h3>
-            <img class="fragment floating-image" src="/ai-fast-presentation/assets/img/trap-BXNCDeEL.png" alt="lost">
-        </section>
-
-        <section>
-            <h2>AI Documentation 📝</h2>
-            <h3>Instant & Accurate</h3>
-            <p>Generate API documentation with a single command!</p>
-        </section>
-
-        <section>
-            <h2>Productivity 🚀</h2>
-            <h3>More Code, Less Time</h3>
-            <p>AI enables faster development and higher quality code.</p>
-        </section>
-
-        <section>
-            <h2>Engineer ➡️ Architect 🧠</h2>
-            <h3>Think Strategy, Not Just Syntax</h3>
-            <p>Shift your focus from implementation to design and strategy.</p>
-        </section>
-
-        <section>
-            <h2>Think Carefully 🤔</h2>
-            <p>Important Considerations for AI Adoption:</p>
-            <section>
-                <h3>Security? ✅</h3>
-                <p>Secure your data and AI systems.</p>
-            </section>
-            <section>
-                <h3>Ethics? ✅</h3>
-                <p>Use AI responsibly and ethically.</p>
-            </section>
-            <section>
-                <h3>Learning? ✅</h3>
-                <p>Stay up-to-date with the latest AI advancements.</p>
-            </section>
-        </section>
-
-        <section>
-            <h2>Start Building! 🛠️</h2>
-            <h3>Experiment, Implement, Share!</h3>
-            <p>The future of software development is AI-powered. Start exploring today!</p>
-            <img src="/ai-fast-presentation/assets/img/practice-BWmNkAJe.png" alt="lost">
-        </section>
-
-        <section>
-            <h2>Questions? 🎤</h2>
-            <h3>Let's Talk!</h3>
-        </section>
+        </div>
     </div>
-</div>
-
 </body>
+
 </html>
