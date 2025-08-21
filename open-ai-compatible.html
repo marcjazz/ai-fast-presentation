@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Compatibility & LiteLLM</title>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Opening -->
+            <section>
+                <h4>AI-Powered Productivity</h4>
+                <h1>OpenAI Compatibility & LiteLLM Proxy</h1>
+                <h6>Workshop for Developers & PMs - 2025</h6>
+                <p class="fragment"><em class="greyish">Standardized APIs for flexible AI integrations</em></p>
+            </section>
+
+            <!-- What is OpenAI Compatibility -->
+            <section>
+                <aside class="notes">
+                    <h2>What Does It Mean to be OpenAI-Compatible?</h2>
+                    <ul>
+                        <li>An API mimics OpenAI's endpoints, request, and response formats.</li>
+                        <li>Developers can use the same SDKs, CLI tools, and integrations without rewriting code.</li>
+                        <li>Supports multi-provider usage and smooth switching.</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <!-- Why Compatibility Matters -->
+            <section>
+                <h2>Why Compatibility Matters</h2>
+                <ul>
+                    <li><b>Portability:</b> Easily switch AI providers.</li>
+                    <li><b>Integration:</b> VS Code, LangChain, CLI scripts rely on OpenAI-compatible APIs.</li>
+                    <li><b>Standardization:</b> Shared response formats prevent bugs.</li>
+                    <li><b>Future-proofing:</b> Avoid vendor lock-in.</li>
+                </ul>
+            </section>
+
+            <!-- Common Endpoints -->
+            <section>
+                <section>
+                    <h2>Common OpenAI Endpoints & Examples</h2>
+                    <div class="mermaid">
+                        mindmap
+                        root((OpenAI Endpoints))
+                          a1[Chat Completions]
+                          a2[Embeddings]
+                          a3[Fine-tuning]
+                          a4[Models]
+                          a5[Files]
+                          a6[Moderations]
+                    </div>
+                    <p>Let's look at some examples:</p>
+                </section>
+                <section>
+                    <h3>1. Chat Completions (/v1/chat/completions)</h3>
+                    <p>Used for chat-based AI interactions.</p>
+                    <pre><code>{
+  "model": "gpt-4",
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Write a haiku about coding."}
+  ]
+}</code></pre>
+                    <pre><code>{
+  "id": "chatcmpl-123",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "message": {"role": "assistant", "content": "Code flows like a stream,\nLogic dancing in silence,\nDreams in every loop."},
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 15, "completion_tokens": 20, "total_tokens": 35}
+}</code></pre>
+                </section>
+
+                <section>
+                    <h3>2. Embeddings (/v1/embeddings)</h3>
+                    <p>Used for vector representations of text.</p>
+                    <pre><code>{
+  "model": "text-embedding-ada-002",
+  "input": "AI compatibility is powerful."
+}</code></pre>
+                    <pre><code>{
+  "object": "embedding",
+  "data": [
+    {"index": 0, "embedding": [0.0123, -0.0045, 0.9987, ...]}
+  ],
+  "model": "text-embedding-ada-002",
+  "usage": {"prompt_tokens": 6, "total_tokens": 6}
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- LiteLLM Proxy -->
+            <section>
+                <h2>LiteLLM Proxy: Mapping OpenAI-Compatible APIs</h2>
+                <aside class="notes">
+                    <ul>
+                        <li>Acts as a proxy translating requests to multiple AI providers.</li>
+                        <li>Preserves OpenAI-style requests and responses.</li>
+                        <li>Supports both OpenAI and non-OpenAI providers (Anthropic, Azure OpenAI, Hugging Face, etc.).
+                        </li>
+                    </ul>
+                </aside>
+                <div class="mermaid">
+                    graph LR
+                    A[Developer] --> B(LiteLLM Proxy)
+                    B --> C{OpenAI}
+                    B --> D[Anthropic]
+                    B --> E((Azure))
+                    B --> F>Hugging Face]
+                </div>
+            </section>
+
+            <!-- Response Message Format -->
+            <section>
+                <h2>Response Message Format</h2>
+                <p>Consistency is key: all providers through LiteLLM return OpenAI-compatible JSON.</p>
+                <pre><code>{
+  "id": "chatcmpl-abc",
+  "object": "chat.completion",
+  "choices": [
+    {"message": {"role": "assistant", "content": "Hello world!"}}
+  ]
+}</code></pre>
+                <p>Prevents downstream errors in clients expecting OpenAI schema.</p>
+            </section>
+
+            <!-- Takeaway -->
+            <section>
+                <h2>Takeaway</h2>
+                <ul>
+                    <li>OpenAI compatibility ensures interoperability.</li>
+                    <li>LiteLLM standardizes responses across providers.</li>
+                    <li>Developers gain freedom, flexibility, and reliability.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Questions? 🎤</h2>
+                <h3>Let's Discuss!</h3>
+            </section>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
