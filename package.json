@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build-for-gh": "vite build --base=/ai-fast-presentation"
   },
   "devDependencies": {
     "@types/reveal.js": "^5.0.5",
