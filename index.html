@@ -1,248 +1,155 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Parent presentation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Compatibility & LiteLLM</title>
 </head>
+
 <body>
-<div class="reveal">
-    <img src="src/assets/logos/favicon-light@.svg" alt="@-logo" class="logo">
-
-    <div class="slides">
-        <section>
-            <img src="src/assets/logos/adorsys.png" alt="adorsys-logo">
-            <h4>AI-Powered Productivity:</h4>
-            <h1>Building Smarter Software, Faster</h1>
-            <h6>Kuidja / Segning - 26/04/2025</h6>
-
-            <p class="fragment">
-                <em class="greyish" style="">V042... It evolves so fast</em>😅
-            </p>
-        </section>
-
-        <section>
-            <h2>The Pressure Cooker</h2>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Opening -->
             <section>
-                <h3>Complexity ⬆️</h3>
-                <p>Larger projects, more dependencies.</p>
-            </section>
-            <section>
-                <h3>Deadlines ⬇️</h3>
-                <p>Faster release cycles, tighter schedules.</p>
+                <h4>AI-Powered Productivity</h4>
+                <h1>OpenAI Compatibility & LiteLLM Proxy</h1>
+                <h6>Workshop for Developers & PMs - 2025</h6>
+                <p class="fragment"><em class="greyish">Standardized APIs for flexible AI integrations</em></p>
             </section>
 
+            <!-- What is OpenAI Compatibility -->
             <section>
-                <h3>Tech 🤯</h3>
-                <p>Constant learning, new frameworks every month!</p>
-                <img class="floating-image fragment" src="src/assets/images/stress.png" alt="stress">
-            </section>
-        </section>
-
-        <section>
-            <h2>AI: Your New Toolkit</h2>
-            <section>
-                <h3>Supercharge Your Workflow!</h3>
-                <img class="floating-image fragment" src="src/assets/images/voila.png" alt="voila">
-            </section>
-            <section>
-                <h3>Code ⚡️</h3>
-                <p>Generate boilerplate, auto-complete code snippets.</p>
-            </section>
-            <section>
-                <h3>Refactor 🔨</h3>
-                <p>Improve code quality, identify potential bugs.</p>
-            </section>
-            <section>
-                <h3>Docs 📚</h3>
-                <p>Automatically generate documentation from code.</p>
-            </section>
-            <section>
-                <h3>Debug 🐛➡️✅</h3>
-                <p>Smart suggestions, faster bug fixes.</p>
-            </section>
-        </section>
-
-        <section>
-            <h2>Better again?</h2>
-            <img class="floating-image fragment" src="src/assets/images/agents.png" alt="agents">
-        </section>
-
-        <section>
-            <h2>MCP: AI's Context Key</h2>
-            <section>
-                <p>The Missing Link for Intelligent AI</p>
-                <p>Data ➡️ Secure Link (MCP) ➡️ AI</p>
-                <div class="mermaid">
-                    graph LR
-                    A[AI Model] --> B{MCP Server}
-                    B --> C[Database]
-                    B --> D[APIs]
-                    B --> E[Files]
-                    C --> B
-                    D --> B
-                    E --> B
-                    B --> A
-                </div>
+                <aside class="notes">
+                    <h2>What Does It Mean to be OpenAI-Compatible?</h2>
+                    <ul>
+                        <li>An API mimics OpenAI's endpoints, request, and response formats.</li>
+                        <li>Developers can use the same SDKs, CLI tools, and integrations without rewriting code.</li>
+                        <li>Supports multi-provider usage and smooth switching.</li>
+                    </ul>
+                </aside>
             </section>
 
+            <!-- Why Compatibility Matters -->
             <section>
-                <p>MCP is a glue to (<em>almost</em>) everything</p>
-                <div class="mermaid">
-                    graph LR
-                    A[AI Model] --> B{MCP Server 1}
-                    A --> C{MCP Server 2}
-                    B --> D[Database]
-                    C --> E[API Endpoints]
-                    D --> B
-                    E --> C
-                </div>
-            </section>
-
-            <section>
-                <p>Combining Multiple Data Sources for Richer Insights</p>
-                <div class="mermaid">
-                    graph LR
-                    A[AI Model] --> B{MCP Server 1}
-                    B --> C[Database A]
-                    B --> D{MCP Server 2}
-                    D --> E[API B]
-                    F{MCP Server 3} --> G[File System]
-                    D --> F
-                    B & F --> H[Data Graph]
-                    H --> A
-                </div>
-            </section>
-        </section>
-
-        <section>
-            <h2>MCP in a nutshell</h2>
-
-            <section>
+                <h2>Why Compatibility Matters</h2>
                 <ul>
-                    <li><b>Data Source Abstraction</b>: MCP servers abstract the underlying data source, exposing a
-                        standardized
-                        API to AI models.
-                    </li>
-                    <li><b>Query Transformation</b>: They translate high-level AI queries into data
-                        source-specific queries.
-                    </li>
+                    <li><b>Portability:</b> Easily switch AI providers.</li>
+                    <li><b>Integration:</b> VS Code, LangChain, CLI scripts rely on OpenAI-compatible APIs.</li>
+                    <li><b>Standardization:</b> Shared response formats prevent bugs.</li>
+                    <li><b>Future-proofing:</b> Avoid vendor lock-in.</li>
+                </ul>
+            </section>
+
+            <!-- Common Endpoints -->
+            <section>
+                <section>
+                    <h2>Common OpenAI Endpoints & Examples</h2>
+                    <div class="mermaid">
+                        mindmap
+                        root((OpenAI Endpoints))
+                          a1[Chat Completions]
+                          a2[Embeddings]
+                          a3[Fine-tuning]
+                          a4[Models]
+                          a5[Files]
+                          a6[Moderations]
+                    </div>
+                    <p>Let's look at some examples:</p>
+                </section>
+                <section>
+                    <h3>1. Chat Completions (/v1/chat/completions)</h3>
+                    <p>Used for chat-based AI interactions.</p>
+                    <pre><code>{
+  "model": "gpt-4",
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Write a haiku about coding."}
+  ]
+}</code></pre>
+                    <pre><code>{
+  "id": "chatcmpl-123",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "message": {"role": "assistant", "content": "Code flows like a stream,\nLogic dancing in silence,\nDreams in every loop."},
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 15, "completion_tokens": 20, "total_tokens": 35}
+}</code></pre>
+                </section>
+
+                <section>
+                    <h3>2. Embeddings (/v1/embeddings)</h3>
+                    <p>Used for vector representations of text.</p>
+                    <pre><code>{
+  "model": "text-embedding-ada-002",
+  "input": "AI compatibility is powerful."
+}</code></pre>
+                    <pre><code>{
+  "object": "embedding",
+  "data": [
+    {"index": 0, "embedding": [0.0123, -0.0045, 0.9987, ...]}
+  ],
+  "model": "text-embedding-ada-002",
+  "usage": {"prompt_tokens": 6, "total_tokens": 6}
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- LiteLLM Proxy -->
+            <section>
+                <h2>LiteLLM Proxy: Mapping OpenAI-Compatible APIs</h2>
+                <aside class="notes">
+                    <div class="mermaid">
+                        graph LR
+                        A[Acts as a proxy translating requests to multiple AI providers] --> B(Preserves OpenAI-style requests and responses)
+                        B --> C{Supports both OpenAI and non-OpenAI providers (Anthropic, Azure OpenAI, Hugging Face, etc.)}
+                    </div>
+                </aside>
+                <div class="mermaid">
+                    graph LR
+                    A[Developer] --> B(LiteLLM Proxy)
+                    B --> C{OpenAI}
+                    B --> D[Anthropic]
+                    B --> E((Azure))
+                    B --> F>Hugging Face]
+                </div>
+            </section>
+
+            <!-- Response Message Format -->
+            <section>
+                <h2>Response Message Format</h2>
+                <p>Consistency is key: all providers through LiteLLM return OpenAI-compatible JSON.</p>
+                <pre><code>{
+  "id": "chatcmpl-abc",
+  "object": "chat.completion",
+  "choices": [
+    {"message": {"role": "assistant", "content": "Hello world!"}}
+  ]
+}</code></pre>
+                <p>Prevents downstream errors in clients expecting OpenAI schema.</p>
+            </section>
+
+            <!-- Takeaway -->
+            <section>
+                <h2>Takeaway</h2>
+                <ul>
+                    <li>OpenAI compatibility ensures interoperability.</li>
+                    <li>LiteLLM standardizes responses across providers.</li>
+                    <li>Developers gain freedom, flexibility, and reliability.</li>
                 </ul>
             </section>
 
             <section>
-                <ul>
-                    <li><b>Security and Access Control</b>: They enforce granular access control policies to protect
-                        sensitive
-                        data.
-                    </li>
-                    <li><b>Data Transformation and Enrichment</b>: Optionally, they transform and
-                        enrich data
-                        before it's delivered to the AI model.
-                    </li>
-                </ul>
-
-                <img class="fragment floating-image" src="src/assets/images/lost.png" alt="lost">
+                <h2>Questions? 🎤</h2>
+                <h3>Let's Discuss!</h3>
             </section>
-        </section>
-
-        <section>
-            <h2>Integration</h2>
-            <p>Almost everywhere</p>
-
-            <div class="custom-icons">
-                <img class="zed" src="src/assets/images/zed.png" alt="lost">
-                <img src="src/assets/images/vscode.png" alt="lost">
-                <img src="src/assets/images/continue-dev.png" alt="lost">
-                <img src="src/assets/images/intellij.png" alt="lost">
-            </div>
-        </section>
-
-        <section>
-            <h2>MCP Server: Data Security</h2>
-            <p>Ensuring Secure Access to Your Data:</p>
-            <section>
-                <h3>Access Control</h3>
-                <p>Limit access based on roles and permissions.</p>
-            </section>
-            <section>
-                <h3>Authentication</h3>
-                <p>Verify the identity of the AI model.</p>
-            </section>
-            <section>
-                <h3>Privacy First</h3>
-                <p>Protect sensitive data and comply with regulations.</p>
-            </section>
-        </section>
-
-        <section>
-            <h2>AI Code Generation ✨</h2>
-            <h3>Database ➡️ React Component</h3>
-            <p>AI generates UI from database schema, automatically!</p>
-        </section>
-
-        <section>
-            <h2>AI Refactoring 🧹</h2>
-            <h3>Clean, Readable Code</h3>
-            <p>Improve code quality with AI-powered refactoring.</p>
-        </section>
-
-        <section>
-            <h2>Don't fall into the trap</h2>
-            <h3>🤷🏿‍♂️</h3>
-            <img class="fragment floating-image" src="src/assets/images/trap.png" alt="lost">
-        </section>
-
-        <section>
-            <h2>AI Documentation 📝</h2>
-            <h3>Instant & Accurate</h3>
-            <p>Generate API documentation with a single command!</p>
-        </section>
-
-        <section>
-            <h2>Productivity 🚀</h2>
-            <h3>More Code, Less Time</h3>
-            <p>AI enables faster development and higher quality code.</p>
-        </section>
-
-        <section>
-            <h2>Engineer ➡️ Architect 🧠</h2>
-            <h3>Think Strategy, Not Just Syntax</h3>
-            <p>Shift your focus from implementation to design and strategy.</p>
-        </section>
-
-        <section>
-            <h2>Think Carefully 🤔</h2>
-            <p>Important Considerations for AI Adoption:</p>
-            <section>
-                <h3>Security? ✅</h3>
-                <p>Secure your data and AI systems.</p>
-            </section>
-            <section>
-                <h3>Ethics? ✅</h3>
-                <p>Use AI responsibly and ethically.</p>
-            </section>
-            <section>
-                <h3>Learning? ✅</h3>
-                <p>Stay up-to-date with the latest AI advancements.</p>
-            </section>
-        </section>
-
-        <section>
-            <h2>Start Building! 🛠️</h2>
-            <h3>Experiment, Implement, Share!</h3>
-            <p>The future of software development is AI-powered. Start exploring today!</p>
-            <img src="src/assets/images/practice.png" alt="lost">
-        </section>
-
-        <section>
-            <h2>Questions? 🎤</h2>
-            <h3>Let's Talk!</h3>
-        </section>
+        </div>
     </div>
-</div>
-
-<script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
+
 </html>
