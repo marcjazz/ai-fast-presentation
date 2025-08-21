@@ -103,12 +103,11 @@
             <section>
                 <h2>LiteLLM Proxy: Mapping OpenAI-Compatible APIs</h2>
                 <aside class="notes">
-                    <ul>
-                        <li>Acts as a proxy translating requests to multiple AI providers.</li>
-                        <li>Preserves OpenAI-style requests and responses.</li>
-                        <li>Supports both OpenAI and non-OpenAI providers (Anthropic, Azure OpenAI, Hugging Face, etc.).
-                        </li>
-                    </ul>
+                    <div class="mermaid">
+                        graph LR
+                        A[Acts as a proxy translating requests to multiple AI providers] --> B(Preserves OpenAI-style requests and responses)
+                        B --> C{Supports both OpenAI and non-OpenAI providers (Anthropic, Azure OpenAI, Hugging Face, etc.)}
+                    </div>
                 </aside>
                 <div class="mermaid">
                     graph LR
