@@ -19,6 +19,7 @@
     "vite": "^6.3.3"
   },
   "dependencies": {
+    "glob": "^11.0.3",
     "mermaid": "^11.6.0",
     "reveal.js": "^5.2.1",
     "reveal.js-mermaid-plugin": "^11.4.1"
